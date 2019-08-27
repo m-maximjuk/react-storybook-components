@@ -8,7 +8,7 @@
   display: flex;
   font-family: $primary-font;
   font-weight: 400;
-  padding: 10px 15px;
+  padding: 6px 9px;
   transition: background $default-easing, border-color $default-easing;
   
   .spinner {
@@ -76,10 +76,10 @@
 
   /* Sizes */
   &--small {
-    padding: 5px 10px;
+    padding: 3px 6px;
   }
   
   &--large {
-    padding: 15px 20px;
+    padding: 9px 12px;
   }
 }
