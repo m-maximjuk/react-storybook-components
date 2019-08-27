@@ -28,9 +28,9 @@ const Button = props => (
   </button>
 );
 
-Button.propTypes = {
-  label: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
-}
+// Button.propTypes = {
+//   label: PropTypes.string.isRequired,
+//   onClick: PropTypes.func,
+// }
 
 export default Button;
