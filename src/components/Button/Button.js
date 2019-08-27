@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './Button.css';
+import Spinner from '../Spinner/Spinner';
 
 const getClassNames = props => {
   const {
@@ -24,6 +25,7 @@ const Button = props => (
     disabled={props.disabled}
     onClick={props.onClick}
   >
+    {props.loading && <Spinner/>}
     {props.label}
   </button>
 );

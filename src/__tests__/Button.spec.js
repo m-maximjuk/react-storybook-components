@@ -9,7 +9,7 @@ describe('Button component', () => {
 
     const button = instance.findByType('button');
 
-    expect(button.props.children).toBe('Checkout');
+    expect(button.props.children.indexOf('Checkout')).not.toBe(-1);
   });
 
   // test('Returns undefined if no label is provided', () => {
@@ -64,6 +64,16 @@ describe('Button component', () => {
     const button = instance.findByType('button');
 
     expect(button.props.disabled).toBeTruthy();
+  });
+
+  /* TODO: Figure out how to do this properly */
+  test('Displays a spinner component if the "loading" property is provided', () => {
+    const component = create(<Button loading/>);
+    const instance = component.root;
+
+    const button = instance.findByType('button');
+
+    expect(button.props.children[0]).toBeInstanceOf(Object);
   });
 
   /* TODO: Test

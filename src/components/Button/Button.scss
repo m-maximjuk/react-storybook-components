@@ -1,13 +1,19 @@
 @import "../../styles/theme";
 
 .btn {
+  align-items: center;
   background: none;
   border: 3px solid transparent;
   border-radius: 4px;
+  display: flex;
   font-family: $primary-font;
   font-weight: 400;
   padding: 10px 15px;
   transition: background $default-easing, border-color $default-easing;
+  
+  .spinner {
+    margin-right: 8px;
+  }
 
   /* States */
   &:hover {
@@ -28,6 +34,12 @@
   &--primary,
   &--accent {
     color: $white;
+
+    .spinner {
+      .path {
+        stroke: $white;
+      }
+    }
   }
 
   &--primary {
