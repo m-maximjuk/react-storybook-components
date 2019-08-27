@@ -1,0 +1,73 @@
+@import "../../styles/theme";
+
+.btn {
+  background: none;
+  border: 3px solid transparent;
+  border-radius: 4px;
+  font-family: $primary-font;
+  font-weight: 400;
+  padding: 10px 15px;
+  transition: background $default-easing, border-color $default-easing;
+
+  /* States */
+  &:hover {
+    background: $light-grey;
+    cursor: pointer;
+  }
+
+  &:focus {
+    border-color: darken($light-grey, 5%);
+    outline: none;
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+
+  /* Variants */
+  &--primary,
+  &--accent {
+    color: $white;
+  }
+
+  &--primary {
+    background: $dark-blue;
+
+    &:hover {
+      background: darken($dark-blue, 20%);
+    }
+
+    &:focus {
+      border-color: lighten($dark-blue, 20%);
+    }
+
+    &:disabled {
+      background: lighten($dark-blue, 20%);
+    }
+  }
+
+  &--accent {
+    background: $pink;
+    
+    &:hover {
+      background: darken($pink, 20%);
+    }
+
+    &:focus {
+      border-color: lighten($pink, 20%);
+    }
+
+    &:disabled {
+      background: lighten($pink, 20%);
+    }
+  }
+
+  /* Sizes */
+  &--small {
+    padding: 5px 10px;
+  }
+  
+  &--large {
+    padding: 15px 20px;
+  }
+}
