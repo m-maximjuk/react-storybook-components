@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import './Button.css';
 
 const getClassNames = props => {
@@ -25,5 +27,10 @@ const Button = props => (
     {props.label}
   </button>
 );
+
+Button.propTypes = {
+  label: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+}
 
 export default Button;

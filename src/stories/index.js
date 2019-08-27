@@ -26,7 +26,7 @@ storiesOf('Button', module)
       <div>
         <Button label="Small" primary small/> &nbsp;
         <Button label="Default" primary/> &nbsp;
-        <Button label="Large"  primary large/>
+        <Button label="Large" primary large/>
       </div>
 
       <br/>
@@ -34,7 +34,7 @@ storiesOf('Button', module)
       <div>
         <Button label="Small" accent small/> &nbsp;
         <Button label="Default" accent/> &nbsp;
-        <Button label="Large"  accent large/>
+        <Button label="Large" accent large/>
       </div>
 
       <br/>
