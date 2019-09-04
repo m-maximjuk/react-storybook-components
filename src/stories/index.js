@@ -90,14 +90,27 @@ storiesOf('Card', module)
         />
 
         <Card
-          icon="coffee"
           style={{ maxWidth: 300, marginRight: 5 }}
         >
           Card without title
         </Card>
       </div>
 
-      <div style={{ display: 'flex', alignItems: 'flex-start', marginTop: 15 }}>
+      <div style={{ display: 'flex', marginTop: 15 }}>
+        <Card
+          title="Card with actions footer"
+          footer={
+            <CardFooter>
+              <Button primary block label="Visit website"/>
+            </CardFooter>
+          }
+          style={{ maxWidth: 300, marginRight: 5 }}
+        >
+          React bootstrap replaces the Bootstrap javascript.
+          Each component has been built from scratch as a true React component,
+          without unneeded dependencies like jQuery.
+        </Card>
+
         <Card
           background="https://fakeimg.pl/640x360/"
           title="Card with text footer"
@@ -110,26 +123,11 @@ storiesOf('Card', module)
           Each component has been built from scratch as a true React component,
           without unneeded dependencies like jQuery.
         </Card>
-
-        <Card
-          title="Card with actions footer"
-          footer={
-            <CardFooter>
-              <Button primary block label="Visit website"/>
-            </CardFooter>
-          }
-          style={{ maxWidth: 300, marginRight: 5 }}
-        >
-          React bootstrap replaces the Bootstrap javascript.
-          Each component has been built from scratch as a true React component,
-          without unneeded dependencies like jQuery..
-        </Card>
       </div>
 
       <div style={{ display: 'flex', alignItems: 'flex-start', marginTop: 15 }}>
         <Card
           interactive
-          icon="coffee"
           title="Interactive card"
           style={{ maxWidth: 300, marginRight: 5 }}
         >
