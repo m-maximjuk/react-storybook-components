@@ -4,6 +4,9 @@ import { storiesOf } from '@storybook/react';
 import Button from '../components/Button/Button';
 import Spinner from '../components/Spinner/Spinner';
 
+import Card from '../components/Card/Card';
+import CardFooter from '../components/Card/Subcomponents/CardFooter';
+
 storiesOf('Button', module)
   .add('Variants', () => (
     <div>
@@ -27,6 +30,12 @@ storiesOf('Button', module)
         <Button label="Loading" primary disabled loading={true}/> &nbsp;
         <Button label="Loading" accent disabled loading={true}/> &nbsp;
         <Button label="Loading" disabled loading={true}/>
+      </div>
+
+      <br/>
+
+      <div style={{width: 300}}>
+        <Button label="Block" primary block/> &nbsp;
       </div>
     </div>
   ))
@@ -56,11 +65,77 @@ storiesOf('Button', module)
     </div>
   ));
 
-  storiesOf('Spinner', module)
+storiesOf('Spinner', module)
   .add('Sizes', () => (
     <div>
       <Spinner large/> &nbsp;
       <Spinner/>
+    </div>
+  ));
+
+storiesOf('Card', module)
+  .add('Variants', () => (
+    <div>
+      <div style={{ display: 'flex' }}>
+        <Card
+          icon="coffee"
+          title="Card with icon"
+          style={{ maxWidth: 300, marginRight: 5 }}
+        />
+        
+        <Card
+          background="https://fakeimg.pl/640x360/"
+          title="Card with background"
+          style={{ maxWidth: 300, marginRight: 5 }}
+        />
+
+        <Card
+          icon="coffee"
+          style={{ maxWidth: 300, marginRight: 5 }}
+        >
+          Card without title
+        </Card>
+      </div>
+
+      <div style={{ display: 'flex', alignItems: 'flex-start', marginTop: 15 }}>
+        <Card
+          background="https://fakeimg.pl/640x360/"
+          title="Card with text footer"
+          footer={
+            <CardFooter>Source: Facebook</CardFooter>
+          }
+          style={{ maxWidth: 300, marginRight: 5 }}
+        >
+          React bootstrap replaces the Bootstrap javascript.
+          Each component has been built from scratch as a true React component,
+          without unneeded dependencies like jQuery.
+        </Card>
+
+        <Card
+          title="Card with actions footer"
+          footer={
+            <CardFooter>
+              <Button primary block label="Visit website"/>
+            </CardFooter>
+          }
+          style={{ maxWidth: 300, marginRight: 5 }}
+        >
+          React bootstrap replaces the Bootstrap javascript.
+          Each component has been built from scratch as a true React component,
+          without unneeded dependencies like jQuery..
+        </Card>
+      </div>
+
+      <div style={{ display: 'flex', alignItems: 'flex-start', marginTop: 15 }}>
+        <Card
+          interactive
+          icon="coffee"
+          title="Interactive card"
+          style={{ maxWidth: 300, marginRight: 5 }}
+        >
+          React bootstrap replaces the Bootstrap javascript.
+        </Card>
+      </div>
     </div>
   ));
   

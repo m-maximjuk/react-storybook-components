@@ -6,7 +6,7 @@ import Spinner from '../Spinner/Spinner';
 
 const getClassNames = props => {
   const {
-    small, large, primary, accent
+    small, large, primary, accent, block
   } = props;
 
   const classNames = ['btn'];
@@ -15,6 +15,7 @@ const getClassNames = props => {
   if (accent) classNames.push('btn--accent');
   if (small) classNames.push('btn--small');
   if (large) classNames.push('btn--large');
+  if (block) classNames.push('btn--block');
 
   return classNames.join(' ');
 }

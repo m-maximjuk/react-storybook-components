@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro:400,700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css');
 
 /* Fonts */
 $primary-font: 'Source Sans Pro', sans-serif;
@@ -14,8 +15,11 @@ $dark-blue: #4e77e7;
 $medium-blue: #bde0e8;
 $light-blue: #eaf5f8;
 
+$light-pink: #fbf3fb;
 $pink: #ff5d7e;
 
 /* Transitions */
-
 $default-easing: .25s ease-out;
+
+/* Radius */
+$default-radius: 4px;
