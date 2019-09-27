@@ -17,7 +17,7 @@ const Card = ({ background, icon }) => {
       className="card__header"
       {...setBackground(background)}
     >
-      {icon && <i class={`fa fa-${icon}`}></i>}
+      {icon && <i className={`fa fa-${icon}`}></i>}
     </header>
   );
 }

@@ -1,0 +1,49 @@
+@import "../../styles/theme";
+
+.accordion {
+  border: 1px solid $light-grey;
+  border-radius: $default-radius;
+  font-family: $primary-font;
+  list-style: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    &:not(:first-child) {
+      border-top: 1px solid $light-grey;
+    }
+
+    &--expanded {
+      background: $light-grey;
+
+      .accordion__content {
+        display: block;
+        max-height: 500px;
+      }
+    }
+  }
+
+  &__title,
+  &__content {
+    margin: 0;
+    padding: $default-padding;
+  }
+
+  &__title {
+    align-items: center;
+    border-bottom: 1px solid $light-grey;
+    display: flex;
+    justify-content: space-between;
+    transition: color $default-easing;
+
+    &:hover {
+      cursor: pointer;
+      color: $dark-blue;
+    }
+  }
+
+  &__content {
+    display: none;
+  }
+}

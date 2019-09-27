@@ -25,7 +25,10 @@ const Card = (props) => {
 
   return (
     <div className={getClassNames(props)} style={props.style}>
-      <CardHeader background={background} icon={icon}/>
+      {
+        (background || icon) &&
+        <CardHeader background={background} icon={icon}/>
+      } 
 
       <CardBody title={title}>
         {body || children}
