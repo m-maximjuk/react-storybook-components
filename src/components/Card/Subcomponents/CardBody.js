@@ -4,7 +4,7 @@ const CardBody = props => {
   const { title, children } = props;
 
   return (
-    <div class="card__body">
+    <div className="card__body">
       {
         title &&
         <h3 className={`card__title ${!children && 'card__title--centered'}`}>
