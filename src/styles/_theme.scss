@@ -8,7 +8,7 @@ $secondary-font: 'Playfair Display', serif;
 /* Colors */
 $black: #2c3242;
 $medium-grey: #717681;
-$light-grey: #f5f5f5;
+$light-grey: #e2e3e5;
 $white: #fff;
 
 $dark-blue: #4e77e7;
@@ -17,6 +17,18 @@ $light-blue: #eaf5f8;
 
 $light-pink: #fbf3fb;
 $pink: #ff5d7e;
+
+$success-background: #c3e6cb;
+$success-color: #155724;
+
+$warning-background: #fff3cd;
+$warning-color: #856404;
+
+$info-background: #bee5eb;
+$info-color: #0c5460;
+
+$error-background: #f5c6cb;
+$error-color: #721c24;
 
 /* Transitions */
 $default-easing: .25s ease-out;

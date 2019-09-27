@@ -1,0 +1,55 @@
+@import "../../styles/theme";
+
+.alert {
+  border: 1px solid $light-grey;
+  border-radius: $default-radius;
+  box-shadow: 0 4px 4px transparentize($medium-grey, .92);
+  display: flex;
+  font-family: $primary-font;
+  padding: 10px 15px;
+
+  .fa {
+    margin: 3px 15px 0 0;
+  }
+
+  &__title {
+    font-size: 1em;
+    margin: 0 0 5px;
+  }
+
+  &--success {
+    background: $success-background;
+    border-color: $success-background;
+
+    .fa {
+      color: $success-color;
+    }
+  }
+
+  &--info {
+    background: $info-background;
+    border-color: $info-background;
+
+    .fa {
+      color: $info-color;
+    }
+  }
+
+  &--warning {
+    background: $warning-background;
+    border-color: $warning-background;
+
+    .fa {
+      color: $warning-color;
+    }
+  }
+
+  &--error {
+    background: $error-background;
+    border-color: $error-background;
+
+    .fa {
+      color: $error-color;
+    }
+  }
+}
