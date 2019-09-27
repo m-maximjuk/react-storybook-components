@@ -1,4 +1,6 @@
 import React from 'react';
+import Spinner from '../Spinner/Spinner';
+
 import './Alert.css';
 
 const getConfigObj = type => {
@@ -28,12 +30,14 @@ const getConfigObj = type => {
 }
 
 const Alert = props => {
-  const { type, title, content, children } = props;
+  const { type, title, content, loading, children } = props;
   const { classNames, icon } = getConfigObj(type);
 
   return (
     <div className={`alert ${classNames}`}>
-      {icon && <i className={`fa ${icon} alert__icon`}></i>}
+      {(icon && !loading) && <i className={`fa ${icon} alert__icon`}></i>}
+
+      {loading && <Spinner/>}
 
       <div className="alert__content">
         {title && <h3 className="alert__title">{title}</h3>}

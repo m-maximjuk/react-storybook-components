@@ -12,6 +12,14 @@ export function getAlertVariants() {
 
     <div style={{ marginTop: 15, width: 450 }}>
       <Alert
+        loading
+        title="Loading"
+        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      />
+    </div>
+
+    <div style={{ marginTop: 15, width: 450 }}>
+      <Alert
         type="success"
         title="Success"
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
