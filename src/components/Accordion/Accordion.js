@@ -14,14 +14,16 @@ class Accordion extends Component {
   }
 
   onItemToggle = ({ index: key }) => {
-    this.setState(state => ({
-      items: state.items.map((item, index) => ({
-        ...item,
-        expanded: (index === key)
-          ? !item.expanded
-          : ((this.state.multiple) ? item.expanded : false),
-      }))
-    }));
+    if (!this.state.items[key].disabled) {
+      this.setState(state => ({
+        items: state.items.map((item, index) => ({
+          ...item,
+          expanded: (index === key)
+            ? !item.expanded
+            : ((this.state.multiple) ? item.expanded : false),
+        }))
+      }));
+    }
   }
 
   render() {

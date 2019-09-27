@@ -14,12 +14,33 @@
       border-top: 1px solid $light-grey;
     }
 
+    &:hover {
+      &:not(.accordion__item--disabled) {
+        .accordion__title {
+          cursor: pointer;
+          color: $dark-blue;
+        }
+      }
+    }
+
     &--expanded {
       background: $light-grey;
 
       .accordion__content {
         display: block;
         max-height: 500px;
+      }
+    }
+
+    &--disabled {
+      cursor: not-allowed;
+
+      .accordion__title {
+        color: $light-grey;
+        
+        .fa {
+          display: none;
+        }
       }
     }
   }
@@ -36,11 +57,6 @@
     display: flex;
     justify-content: space-between;
     transition: color $default-easing;
-
-    &:hover {
-      cursor: pointer;
-      color: $dark-blue;
-    }
   }
 
   &__content {
