@@ -5,7 +5,7 @@ import Spinner from '../Spinner/Spinner';
 
 const getClassNames = props => {
   const {
-    small, large, primary, accent, block
+    small, large, primary, accent, block,
   } = props;
 
   const classNames = ['btn'];
@@ -22,17 +22,14 @@ const getClassNames = props => {
 const Button = props => (
   <button
     className={getClassNames(props)}
+    type={props.type}
     disabled={props.disabled}
     onClick={props.onClick}
+    style={props.style}
   >
     {props.loading && <Spinner/>}
     {props.label}
   </button>
 );
-
-// Button.propTypes = {
-//   label: PropTypes.string.isRequired,
-//   onClick: PropTypes.func,
-// }
 
 export default Button;

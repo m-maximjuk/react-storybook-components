@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Spinner from '../Spinner/Spinner';
+import InputMask from "react-input-mask";
 
 import './Input.css';
 
@@ -16,11 +17,13 @@ const getClassNames = (props) => {
 
 const Input = props => {
   const {
+    style,
     type,
     name,
     id,
     value,
     label,
+    mask,
     disabled,
     readonly,
     required,
@@ -29,10 +32,11 @@ const Input = props => {
     icon,
     maxLength,
     loading,
+    beforeMaskedStateChange,
   } = props;
 
   return (
-    <div className="form-group">
+    <div className="form-group" style={style}>
       <label className="form-group__label">
         {label} {required && <span class="required">*</span>}
       </label>
@@ -48,17 +52,19 @@ const Input = props => {
           }
 
           <div className="input__container">
-            <input
+            <InputMask
               className={getClassNames(props)}
               type={type || 'text'}
               name={name}
               id={id}
               value={value}
+              mask={mask}
               disabled={disabled || loading}
               readonly={readonly}
               required={required}
               maxLength={maxLength}
               onChange={onChange}
+              beforeMaskedStateChange={beforeMaskedStateChange}
             />
             {caption && <span className="input__caption">{caption}</span>}
           </div>

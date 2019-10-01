@@ -73,6 +73,22 @@ export function getInputVariants() {
 
     <div style={{ marginTop: 15, maxWidth: 350 }}>
       <UseState
+        initialValue="00000000"
+        render={(value, setValue) => {
+          return <div>
+            <Input
+              label="Mask"
+              value={value}
+              mask="99/99/9999"
+              onChange={({ target }) => setValue(target.value)}
+            />
+          </div>
+        }}
+      />
+    </div>
+
+    <div style={{ marginTop: 15, maxWidth: 350 }}>
+      <UseState
         initialValue="Loading"
         render={(value, setValue) => {
           return <div>

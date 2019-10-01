@@ -4,8 +4,9 @@ import { getAlertVariants } from './alert';
 import { getAccordionVariants } from './accordion';
 import { getButtonVariants, getButtonSizes } from './button';
 import { getCardVariants } from './card';
-import { getSpinnerVariants } from './spinner';
+import { getFormVariants } from './form';
 import { getInputVariants } from './input';
+import { getSpinnerVariants } from './spinner';
 
 storiesOf('Alert', module)
   .add('Variants', getAlertVariants);
@@ -19,6 +20,9 @@ storiesOf('Button', module)
 
 storiesOf('Card', module)
   .add('Variants', getCardVariants);
+
+storiesOf('Form', module)
+  .add('Variants', getFormVariants);
 
 storiesOf('Input', module)
   .add('Variants', getInputVariants);
