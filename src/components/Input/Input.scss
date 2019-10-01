@@ -21,6 +21,7 @@
 
       &__prepend {
         align-items: center;
+        background: $white;
         border: 1px solid $light-grey;
         border-right: none;
         border-bottom-left-radius: $default-radius;
@@ -38,6 +39,7 @@
         width: 100%;
         
         .input__field {
+          background: $white;
           border: 1px solid $light-grey;
           border-radius: $default-radius;
           display: block;
@@ -51,7 +53,6 @@
           }
 
           &:disabled {
-            background: none;
             color: $medium-grey;
             cursor: not-allowed;
           }

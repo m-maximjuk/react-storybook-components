@@ -1,0 +1,11 @@
+@import "../../styles/theme";
+
+.login {
+  background: $medium-grey;
+  
+  &__container {
+    background: $white;
+    height: 100vh;
+    padding: 0 16px;
+  }
+}
